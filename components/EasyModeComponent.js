@@ -53,7 +53,7 @@ export default function EasyModeComponent() {
             <TextInput
                 style={styles.input}
                 onChangeText={onChangeNumber}
-                value={parseInt(number)}
+                value={number}
                 placeholder={`Type result here: ${operationResult}`}
                 keyboardType="numeric"
             />
@@ -64,9 +64,8 @@ export default function EasyModeComponent() {
             ></Button>
 
             {
-                urlImg ? <Image style={styles.img} source={{uri:`https://cataas.com${urlImg}/says/${messageImg}`}} /> : null
+                urlImg ? <Image style={styles.img} source={{uri:`https://cataas.com${urlImg}/says/${messageImg}?size=60`}} /> : null
             }
-
         </View>
     );
 }
